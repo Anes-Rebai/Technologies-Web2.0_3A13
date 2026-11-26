@@ -8,6 +8,7 @@ __pycache__/
 
 # Django
 db.sqlite3
+3A13.sqlite3
 media/
 staticfiles/
 

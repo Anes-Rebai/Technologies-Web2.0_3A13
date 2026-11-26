@@ -14,7 +14,7 @@ def birth_date_validator(d):
 class Doctor(User):
     license_number = models.CharField(max_length=5, unique=True, validators=[MinLengthValidator(5),MaxLengthValidator(5)])
     phone = models.CharField(max_length=8, validators=[number_validator])
-    specialities = models.ForeignKey("AccountApp.Specialty", related_name="doctors")
+    specialities = models.ForeignKey("AccountApp.Specialty", related_name="doctors", on_delete=models.PROTECT)
 
 
 class Patient(User):
